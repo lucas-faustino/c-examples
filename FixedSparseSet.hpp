@@ -26,7 +26,7 @@ SOFTWARE.*/
 #include <stdint.h>
 #include <type_traits>
 
-template<typename TType, typename TIntType, uint32_t TSize>
+template<typename TType, typename TIntType, uint64_t TSize>
 struct FixedSparseSet
 {
 	static_assert(std::is_integral<TIntType>::value, "TIntType was not integral. Please change it to; u8, u16, i8, i16, etc.");
@@ -36,15 +36,15 @@ public:
 	const TIntType* GetCountPtr() const { return &count; }
     const TIntType GetCount() const { return count; }
 
-	void Add(const int index, const TType &item)
+	void Add(const TIntType index, const TType &item)
 	{
-		dense [count] = static_cast<TIntType>(index);
+		dense [count] = index;
 		sparse[index] = count;
 		items [count] = item;
 		count++;
 	}
 
-	void Remove(const int index)
+	void Remove(const TIntType index)
 	{
 		const auto temp = dense[count - 1];
 		dense [sparse[index]] = temp;
