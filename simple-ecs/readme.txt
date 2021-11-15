@@ -1,4 +1,4 @@
-This is a dead simple ECS. I wouldn't really advise using this for your projects as there a lot of really good ones out there. As is the nature of this repository, I just wanted
+This is a dead simple ECS. I wouldn't really advise using this for your projects as there are a lot of really good ones out there. As is the nature of this repository, I just wanted
 to mess around and figure out how to do a simple implemnetation in C. I don't claim to be a C master so this code is probably not the best.
 
 Feel free to take it, tweak it, change it, improve it, or whatever else you'd like to do with it but do so at your own risk. read below if you're thinking about using this.
