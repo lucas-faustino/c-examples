@@ -20,6 +20,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
+#ifndef _SOA_HPP
+#define _SOA_HPP
+
 #include <tuple>
 #include <array>
 #include <stdint.h>
@@ -96,3 +99,4 @@ private:
 	std::tuple<Array<T>...> arrays;
 	uint32_t                count{ 0 };
 };
+#endif
